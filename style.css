@@ -1,0 +1,171 @@
+:root {
+  --Violet: hsl(257, 40%, 49%);
+  --pink: hsl(300, 69%, 71%);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  background-image: url(../images/bg-desktop.svg);
+  background-color: var(--Violet);
+  background-repeat: no-repeat;
+}
+
+.parent {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+}
+
+.hd {
+  font-family: "Poppins", sans-serif;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?v=3.2.1');
+  src: url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.eot?#iefix&v=3.2.1') format('embedded-opentype'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.woff?v=3.2.1') format('woff'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.ttf?v=3.2.1') format('truetype'), url('http://fortawesome.github.io/Font-Awesome/assets/font-awesome/font/fontawesome-webfont.svg#fontawesomeregular?v=3.2.1') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Start Content Styling  */
+
+.sec2 {
+  display: flex;
+  line-height: 1.5;
+}
+
+.part1 {
+  margin-right: 60px;
+}
+
+.logo {
+  margin-bottom: 80px;
+  height: 50px;
+}
+
+.part2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.part2 h1 {
+  color: #fff;
+  font-weight: 600;
+}
+
+.part2 p {
+  color: #fff;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.part2 a {
+  text-decoration: none;
+  color: var(--Violet);
+  background-color: #ffff;
+  padding: 15px 50px;
+  border-radius: 30px;
+  box-shadow: 0 10px 15px -7px black;
+  transition: 0.3s;
+}
+
+.part2 a:hover {
+  background-color: var(--pink);
+  color: #fff;
+}
+
+ion-icon {
+  font-size: 40px;
+  color: #fff;
+  transition: 0.3s;
+}
+
+ion-icon:hover {
+  color: var(--pink);
+}
+
+.links {
+  position: absolute;
+  bottom: 5%;
+  right: 5%;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width : 991px) {
+  .sec2 {
+    flex-direction: column;
+  }
+  .parent {
+    height: fit-content;
+  }
+  .links {
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 140px);
+  }
+  .hd {
+    margin-bottom: 20px;
+  }
+  p {
+    margin-bottom: 120px;
+  }
+  footer {
+    display: none;
+  }
+  .container {
+    margin-top: 100px;
+  }
+  .part1 img{
+    height: 400px;
+  }
+}
+
+@media (max-width : 767px) {
+  .part1 img{
+    height: 220px;
+  }
+  .links {
+    transform: translate(-50%, 40px) !important;
+  }
+}
